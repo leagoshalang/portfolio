@@ -3,9 +3,13 @@ import React from "react";
 function Projects() {
   const projects = {
     wordpress: [
-      { title: "Ervosmart Website", description: "Full-stack WordPress site for landscaping & horticulture." },
-      { title: "Sikis Koffee Kafe", description: "WordPress e-commerce site for a coffee brand." },
-      { title: "Musa Property Investment", description: "Professional WordPress site for a property investment company" },
+      { title: "Ervosmart Website",
+         description: "Full-stack WordPress site for landscaping & horticulture.",
+         link: "https://ervosmart.co.za/" },
+      // { title: "Sikis Koffee Kafe", description: "WordPress e-commerce site for a coffee brand." },
+      { title: "Musa Property Investment", 
+        description: "Professional WordPress site for a property investment company" ,
+        link: "https://musapropertysolutions.co.za/"},
     ],
     java: [
       { title: "Library Management System", description: "Java desktop app to manage books, students, and lending." },
@@ -44,13 +48,15 @@ function Projects() {
             <h3 className="text-2xl font-semibold mb-4 capitalize">{tech} Projects</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projList.map((proj, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 shadow rounded-lg hover:shadow-lg transition"
+                <a
+                 key={index}
+                href={proj.link}
+                target="_blank"
+                className="bg-white p-6 shadow rounded-lg hover:shadow-lg transition text-left block"
                 >
                   <h4 className="font-semibold text-blue-700 mb-2">{proj.title}</h4>
                   <p className="text-gray-600 text-sm">{proj.description}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
