@@ -32,13 +32,11 @@ const Languages = () => {
               key={lang.name}
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all flex flex-col items-center text-center"
             >
-              {/* Logo/Icon */}
+              
               <div className="text-5xl mb-4">{lang.icon}</div>
 
-              {/* Name */}
               <h2 className="text-2xl font-semibold mb-2 text-blue-600">{lang.name}</h2>
 
-              {/* Level Badge */}
               <span className="mt-2 px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700">
                 {lang.level}
               </span>

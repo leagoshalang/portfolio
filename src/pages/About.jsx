@@ -6,7 +6,6 @@ const About = () => {
       <div className="flex-grow max-w-5xl mx-auto p-8">
         <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
 
-        {/* -------------------- Introduction -------------------- */}
         <section className="mb-12">
           <p className="text-lg leading-relaxed">
             Hello! I'm <span className="font-semibold">Shalang Leago</span>, a passionate Software Developer specializing in web and mobile development. 
@@ -15,7 +14,6 @@ const About = () => {
           </p>
         </section>
 
-        {/* -------------------- Industry Experience -------------------- */}
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4">Industry Experience</h2>
           
@@ -35,7 +33,6 @@ const About = () => {
           </p>
         </section>
 
-        {/* -------------------- Academic Projects -------------------- */}
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4">Academic Projects</h2>
           <p className="text-lg leading-relaxed mb-4">
@@ -47,7 +44,6 @@ const About = () => {
           </p>
         </section>
 
-        {/* -------------------- Closing Statement -------------------- */}
         <section className="mb-12">
           <p className="text-lg leading-relaxed">
             With a solid foundation in software engineering principles and extensive hands-on experience, 

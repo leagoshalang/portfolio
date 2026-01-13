@@ -1,12 +1,13 @@
 import React from "react";
 
+
 function Projects() {
   const projects = {
     wordpress: [
       { title: "Ervosmart Website",
          description: "Full-stack WordPress site for landscaping & horticulture.",
          link: "https://ervosmart.co.za/" },
-      // { title: "Sikis Koffee Kafe", description: "WordPress e-commerce site for a coffee brand." },
+    
       { title: "Musa Property Investment", 
         description: "Professional WordPress site for a property investment company" ,
         link: "https://musapropertysolutions.co.za/"},

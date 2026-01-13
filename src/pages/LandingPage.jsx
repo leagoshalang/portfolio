@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Icons
 import { FaJava, FaReact, FaJs, FaComments } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 
-// Assets
 import python101 from "../assets/python-101.png";
 import backend from "../assets/Backend-ICEP.jpeg";
 import Leago from "../assets/Leago.jpeg";
@@ -13,9 +11,6 @@ import Leago from "../assets/Leago.jpeg";
 const LandingPage = () => {
   const navigate = useNavigate();
 
-  /* =======================
-     STATE
-  ======================= */
   const professions = ["Full-Stack Software Developer", "UI/UX Designer"];
   const [displayedText, setDisplayedText] = useState("");
   const [currentProfessionIndex, setCurrentProfessionIndex] = useState(0);
@@ -25,9 +20,7 @@ const LandingPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCert, setSelectedCert] = useState(null);
 
-  /* =======================
-     TYPEWRITER EFFECT
-  ======================= */
+  
   useEffect(() => {
     const currentProfession = professions[currentProfessionIndex];
     let timeout;
@@ -54,9 +47,7 @@ const LandingPage = () => {
     return () => clearTimeout(timeout);
   }, [displayedText, typing, currentProfessionIndex]);
 
-  /* =======================
-     DATA
-  ======================= */
+  
   const languages = [
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" />, level: "Advanced" },
     { name: "Java", icon: <FaJava className="text-orange-500" />, level: "Intermediate" },
@@ -96,13 +87,11 @@ const LandingPage = () => {
     },
   ];
 
-  /* =======================
-     RENDER
-  ======================= */
+
   return (
     <div className="w-full text-gray-800">
 
-      {/* ===== HERO ===== */}
+   
       <section className="bg-gray-50 py-28 text-center px-6">
         <h1 className="text-5xl font-extrabold mb-3 text-gray-900">
           Shalang Leago
@@ -128,7 +117,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ===== ABOUT ME ===== */}
+      
       <section className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div>
@@ -165,7 +154,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ===== LANGUAGES ===== */}
+      
       <section className="bg-gray-50 py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-10 text-gray-900">
           Languages & Skills
@@ -191,7 +180,7 @@ const LandingPage = () => {
         </a>
       </section>
 
-      {/* ===== PROJECTS ===== */}
+      
       <section className="bg-white py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-10 text-gray-900">Projects</h2>
 
@@ -217,7 +206,7 @@ const LandingPage = () => {
         </a>
       </section>
 
-      {/* ===== CERTIFICATIONS ===== */}
+      
       <section className="bg-gray-50 py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-10 text-gray-900">Certifications</h2>
 
@@ -239,7 +228,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ===== CERT MODAL (SCROLLABLE) ===== */}
+      
       {modalOpen && selectedCert && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 relative">
@@ -265,7 +254,7 @@ const LandingPage = () => {
         </div>
       )}
 
-      {/* ===== CHAT BUTTON ===== */}
+      
       <button
         onClick={() => setChatOpen(!chatOpen)}
         className="fixed bottom-6 right-6 bg-blue-600 p-4 rounded-full text-white shadow-lg hover:bg-blue-700 transition"
